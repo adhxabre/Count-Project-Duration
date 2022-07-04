@@ -13,6 +13,7 @@
     padding: 15px;
     margin: auto;
     margin-top: 100px;
+    margin-bottom: 100px;
     position: relative;
     text-align: justify;
 }
@@ -41,4 +42,50 @@
     position: relative;
     cursor: pointer;
     box-shadow: 0px 0px 5px rgb(50, 50, 50);
+    transition: 0.15s;
+}
+
+.contact-btn:hover {
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(50, 50, 50);
+    background: none;
+    transition: 0.15s;
+}
+
+.download {
+    margin: 30px 300px 0px;
+}
+
+.download a {
+    text-decoration: none;
+    color:rgb(50, 50, 50);
+    font-size: 18px;
+}
+
+.fa-download {
+    color:rgb(50, 50, 50);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container > div {
+    color: #fff;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid rgb(50, 50, 50);
+    border-radius: 100%;
+    background: rgb(50, 50, 50);
+}
+
+.self-container {
+    margin-top: 50px;
+}
+
+.self-container img {
+    width: 250px;
+    border-radius: 15px;
 }

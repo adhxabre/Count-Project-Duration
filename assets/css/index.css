@@ -3,39 +3,130 @@
     padding: 0;
     font-family: Poppins, sans-serif;
 }
+
+body {
+    margin: 0;
+}
+
+nav {
+    background-color: #fff;
+    height: 7vh;
+    display: flex;
+    box-shadow: 0px 0px 15px rgb(50, 50, 50);
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    flex: 50%;
+    padding-left: 90px;
+}
+
+.left a img {
+    width: 75px;
+}
+
+.left ul {
+    list-style: none;
+    margin-left: 40px;
+}
+
+.left ul li {
+    display: inline-block;
+    padding-right: 12px;
+    position: relative;
+}
+
+.left ul li a {
+    color:rgb(50, 50, 50);
+    text-decoration: none;
+}
+
+.left ul li a.active {
+    color: rgb(255, 70, 70);
+    font-weight: 700;
+}
+
+.left ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(50, 50, 50);
+    display: block;
+    transition: 0.15s;
+}
+.left ul li:hover::after{
+    width: 100%;
+}
+
+.right {
+    flex: 50%;
+    justify-content: flex-end;
+    padding-right: 90px;
+}
+
+.right a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(50, 50, 50);
+    font-size: 15px;
+    padding: 7px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.right a:hover {
+    transition: 0.15s;
+    box-shadow: 0px 0px 10px rgb(50, 50, 50);
+}
+
 .division {
-    border: 0px solid #fff;
+    display: flex;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgb(79, 79, 79);
-    min-width: 150vh;
-    min-height: 50vh;
-    width: 150px;
+    height: 69vh;
+    width: 170vh;
     padding: 15px;
     margin: auto;
     margin-top: 100px;
     margin-bottom: 100px;
     position: relative;
+}
+
+.first-container {
+    flex: 70%;
+    padding-left: 90px;
     text-align: justify;
 }
 
-.division h1 {
-    padding: 75px 300px 0px;
+.first-container h1 {
+    padding-top: 75px;
     font-size: 32px;
 }
 
-.division p {
-    padding: 10px 300px;
+.first-container p {
+    padding-top: 10px;
+    padding-right: 150px;
     font-size: 16px;
 }
 
+#contdown {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
 .contact-btn {
-    display: inline-block;
+    display: inline;
     text-decoration: none;
     color: #fff;
     border: 1px solid rgb(50, 50, 50);
     border-radius: 30px;
-    margin-left: 300px;
-    margin-top: 15px;
     padding: 12px 30px;
     font-size: 15px;
     background: rgb(50, 50, 50);
@@ -55,8 +146,7 @@
 .download {
     width: 175px;
     height: 30px;
-    margin-left: 300px;
-    margin-top: 30px;
+    margin-left: 30px;
     box-shadow: 0px 0px 0px rgb(50, 50, 50);
     transition: 0.25s;
 }
@@ -75,9 +165,9 @@
 
 .container {
     display: flex;
-    justify-content: center;
     margin-top: 50px;
     text-align: center;
+    align-items: center;
 }
 
 .container > a {
@@ -102,8 +192,17 @@
     box-shadow: 0px 0px 7px rgb(50, 50, 50);
 }
 
+.second-container {
+    flex: 30%;
+    padding-right: 90px;
+    position: relative;
+}
+
 .self-container {
-    margin: 50px auto 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
     width: 300px;
     border: 0px solid white;
     border-radius: 20px;

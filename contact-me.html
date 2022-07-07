@@ -5,56 +5,59 @@
         <title>Abel - Contact</title>
         <link rel="icon" href="assets/images/icon.png">
         <link rel="stylesheet" href="assets/css/contact.css">
+        <link rel="stylesheet" href="assets/css/nav.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     </head>
     <body>
-        <nav>
-            <div class="left">
-                <a href="#">
-                    <img src="assets/images/icon.png">
-                </a>
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Blog</a>
-                    </li>
-                </ul>
+        <section class="header">
+            <nav>
+                <div class="left">
+                    <a href="#">
+                        <img src="assets/images/icon.png">
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="myProject.html">My Project</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Pembatas -->
+                <div class="right">
+                    <a href="contact-me.html">Contact Me</a>
+                </div>
+            </nav>
+            <div class="first-layer">
+                <form action="" class="former">
+                    <div>
+                        <label for="name">Name</label>
+                        <input id="name" type="text" required placeholder="Input your name">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" type="email" required placeholder="Input your e-mail">
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" type="text" required placeholder="Input your number">
+                    </div>
+                    <div>
+                        <label for="subject">Subject</label>
+                        <select id="subject">
+                                <option>Let's Collaboration</option>
+                                <option>Let's Create Project</option>
+                                <option>Let's Talk</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message">Your Message</label>
+                        <textarea id="message" cols="30" rows="10" placeholder="Input your message"></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
             </div>
-            <!-- Pembatas -->
-            <div class="right">
-                <a href="#">Contact Me</a>
-            </div>
-        </nav>
-        <div class="first-layer">
-            <form action="" class="former">
-                <div>
-                    <label for="name">Name</label>
-                    <input id="name" type="text" required placeholder="Input your name">
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input id="email" type="email" required placeholder="Input your e-mail">
-                </div>
-                <div>
-                    <label for="phone">Phone Number</label>
-                    <input id="phone" type="text" required placeholder="Input your number">
-                </div>
-                <div>
-                    <label for="subject">Subject</label>
-                    <select id="subject">
-                            <option>Let's Collaboration</option>
-                            <option>Let's Create Project</option>
-                            <option>Let's Talk</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="message">Your Message</label>
-                    <textarea id="message" cols="30" rows="10" placeholder="Input your message"></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+        </section>
     </body>
 </html>

@@ -7,7 +7,7 @@
 }
 
 .myProject-form .form-container {
-    width: 500px;
+    width: 40vw;
 }
 
 .myProject-form .form-container h1 {
@@ -202,5 +202,55 @@ select {
 .imaging {
     margin-top: 20px;
     width: 75vw;
+    object-fit: cover;
+}
+
+.project-date {
+    display: flex;
+}
+
+.project-date .lefter {
+    justify-content: flex-start;
+    margin-right: 40px;
+    flex: 50%;
+}
+
+.project-date .righter {
+    justify-content: flex-end;
+    margin-left: 40px;
+    flex: 50%;
+}
+
+.myProject-form form .groupto {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.myProject-form form .groupto .gamers {
+    display: flex;
+}
+
+.myProject-form form .groupto .gamers div {
+    display: inline-flex;
+    padding-right: 15px;
+}
+
+.myProject-form form .groupto .gamers div input {
+    transform: scale(1) translate(50%, 50%);
+    box-shadow: 0 0 1px inset #999;
+}
+
+.myProject-form form .groupto .gamers div label {
+    padding-left: 10px;
+}
+
+.iconer {
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.Iconers img {
+    width: 60px;
+    height: 60px;
     object-fit: cover;
 }

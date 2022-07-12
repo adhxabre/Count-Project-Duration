@@ -9,10 +9,20 @@ function addProject(event) {
 
     image = URL.createObjectURL(image.files[0])
 
+    checkedValue = []
+    let games = document.getElementsByClassName('games')
+    let data = games.length
+    for (var i = 0; i < data; i++) {
+        if (games[i].checked == true) {
+            checkedValue.push(games[i].value)
+        }
+    }
+
     let projecting = {
         title,
         content,
         image,
+        checkedValue,
         postedAt: new Date()
     }
 
@@ -98,6 +108,15 @@ function renderProjects() {
                 <p>
                     ${projects[i].content}
                 </p>
+                <div class="iconer">
+                    ${(function icon() {
+                        let string = ""
+                        for (let j = 0; j < projects[i].checkedValue.length; j++) {
+                            string += `<div class="Iconers"><img src="${projects[i].checkedValue[j]}"></div>`
+                        }
+                        return string
+                    })()}
+                </div>
                 <div style="text-align: right;">
                     <span style="font-size: 15px; color: grey;">${timing(projects[i].postedAt)}</span>
                 </div>
@@ -107,6 +126,6 @@ function renderProjects() {
     }
 }
 
-setInterval (function () {
-    renderProjects()
-}, 2000)
+// setInterval (function () {
+//     renderProjects()
+// }, 2000)

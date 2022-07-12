@@ -86,40 +86,121 @@ select {
     margin-left: auto;
 }
 
-.project-detail {
+.myProject .project-list {
+    margin-top: 80px;
+    margin-bottom: 80px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.project-detail-container {
+.myProject .project-list .project-list-item {
     width: 80%;
-    margin: 40px 0;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgb(50, 50, 50);
+    display: flex;
 }
 
-.project-detail-container img {
+.myProject .project-list .project-list-item .project-image {
+    flex: 1;
+}
+
+.myProject .project-list .project-list-item .project-image img {
     width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgb(50, 50, 50);
+    object-fit: cover;
 }
 
-.project-detail-container h1 {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 44px;
-    line-height: 120%;
-    margin-bottom: 15px;
+.myProject .project-list .project-list-item .project-content {
+    padding-left: 20px;
+    flex: 2;
 }
 
-.project-detail-container .author {
-    font-weight: 100;
-    font-size: 20px;
-    line-height: 120%;
+.myProject .project-list .btn-group {
+    text-align: right;
     margin-bottom: 20px;
 }
 
-.project-detail-container p {
-    margin-top: 40px;
-    font-style: normal;
+.myProject .project-list .btn-group .btn-edit {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: 0;
+    border-radius: 30px;
+    background: #dbdbdb;
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+    box-shadow: 0px 0px 0px rgb(50, 50, 50);
+    transition: 0.1s;
+}
+
+.myProject .project-list .btn-group .btn-edit:hover {
+    transition: 0.1s;
+    box-shadow: 0px 0px 5px rgb(50, 50, 50);
+
+}
+
+.myProject .project-list .btn-group .btn-post {
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 30px;
+    background: #ec4d37;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px rgb(50, 50, 50);
+    transition: 0.1s;
+}
+
+.myProject .project-list .btn-group .btn-post:hover {
+    transition: 0.1s;
+    box-shadow: 0px 0px 5px rgb(50, 50, 50);
+
+}
+.myProject .project-list h1 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.myProject .project-list .detail-project-content {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.myProject .project-list .project-list-item p {
+    margin-top: 20px;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 140%;
+    font-size: 14px;
+    line-height: 20px;
     text-align: justify;
+}
+
+/* Details on open */
+.project-detail {
+    display: relative;
+    justify-content: center;
+}
+
+.project-detail .project-detail-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 120vh;
+    width: 75vw;
+}
+
+.project-detail .project-detail-container h1 {
+    margin-top: 20px;
+}
+
+.project-detail .project-detail-container p {
+    margin-top: 20px;
+}
+
+.imaging {
+    margin-top: 20px;
+    width: 75vw;
+    object-fit: cover;
 }

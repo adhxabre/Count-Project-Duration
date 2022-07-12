@@ -1,6 +1,6 @@
 let projects = []
 
-function addBlog(event) {
+function addProject(event) {
     event.preventDefault()
 
     let title = document.getElementById("input-project-title").value
@@ -9,14 +9,66 @@ function addBlog(event) {
 
     image = URL.createObjectURL(image.files[0])
 
-    let blog = {
+    let projecting = {
         title,
         content,
-        image
+        image,
+        postedAt: new Date()
     }
 
-    projects.push(blog)
+    projects.push(projecting)
     renderProjects()
+}
+
+let month = [
+    "Januari",
+    "Februari",
+    "Maret",
+    "April",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Agustus",
+    "September",
+    "Oktober",
+    "November",
+    "Desember"
+]
+
+function pewaktu(time) {
+    let dates = time.getDate()
+    let months = time.getMonth()
+    let years = time.getFullYear()
+
+    let hours = time.getHours()
+    let minutes = time.getMinutes()
+
+    return `${dates} ${month[months]} ${years} | ${hours}:${minutes} +07:00 GMT`
+}
+
+function timing(time) {
+    let timer = new Date() - new Date(time)
+
+    let miliseconds = 1000
+    let secondInMinutes = 60
+    let minuteInHour = 60
+    let secondInHour = secondInMinutes * minuteInHour
+    let hourInDay = 23
+
+    let dayTiming = timer / (miliseconds * secondInHour * hourInDay)
+
+    if (dayTiming >= 1) {
+        const dayDate = `${Math.floor(dayTiming)} Days Ago`
+        return dayDate
+    } else {
+        let hourTiming = Math.floor(timer / (miliseconds * secondInHour))
+        if (hourTiming > 0) {
+            return `${hourTiming} Hours Ago`
+        } else {
+            let minuteTiming = Math.floor(timer / (miliseconds * secondInMinutes))
+            return `${minuteTiming} Minutes Ago`
+        }
+    }
 }
 
 function renderProjects() {
@@ -38,19 +90,23 @@ function renderProjects() {
                     <button class="btn-post">Post Blog</button>
                 </div>
                 <h1>
-                    <a href="blog-detail.html" target="_blank">${projects[i].title}</a>
+                    <a href="myProject-detail.html" target="_blank">${projects[i].title}</a>
                 </h1>
                 <div class="detail-project-content">
-                    8 Jul 2022 4:35 WIB | Abel Dustin Hyman Susilo
+                    ${pewaktu(projects[i].postedAt)} | Abel Dustin Hyman Susilo
                 </div>
                 <p>
                     ${projects[i].content}
                 </p>
                 <div style="text-align: right;">
-                    <span style="font-size: 15px; color: grey;">8 minutes ago</span>
+                    <span style="font-size: 15px; color: grey;">${timing(projects[i].postedAt)}</span>
                 </div>
             </div>
         </div>
         `
     }
 }
+
+setInterval (function () {
+    renderProjects()
+}, 2000)
